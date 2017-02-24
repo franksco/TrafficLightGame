@@ -41,6 +41,9 @@
                                 <state key="normal" title="Button" backgroundImage="redButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="StartStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vbb-yQ-PVT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfP-nn-9gd">
                                 <rect key="frame" x="16" y="257" width="343" height="128"/>
@@ -69,6 +72,11 @@
                             <constraint firstItem="7L2-fA-Exn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ul4-4i-oTt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="JfP-nn-9gd" id="OFY-4C-0Mf"/>
+                        <outlet property="startStopButton" destination="hWi-42-fHa" id="Pez-Zw-epd"/>
+                        <outlet property="trafficLight" destination="7L2-fA-Exn" id="0K1-B9-VQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
