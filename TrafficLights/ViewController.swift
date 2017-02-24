@@ -68,6 +68,8 @@ class ViewController: UIViewController {
             
             trafficLight.image = UIImage(named: "TrafficLight2")
             
+            startStopButton.setTitle("Stop", for: [])
+            
         } else if timerInt == 0 {
             
             trafficLight.image = UIImage(named: "TrafficLight1")
