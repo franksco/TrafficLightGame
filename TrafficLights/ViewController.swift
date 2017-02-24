@@ -47,6 +47,11 @@ class ViewController: UIViewController {
             
             //if statement sets score equal to 0, within that statement it sets the timerInt equal to 3 and sets our trafficLight.image to a black traffic light. Then we create an NSTimer telling it to count every second referencing our updateCounter func each time.
             
+            startStopButton.isEnabled = false
+            startStopButton.setTitle("", for:[])
+            
+                //code that disables the button and makes the text inside the button disappear.
+            
         }
         
     }
@@ -71,7 +76,7 @@ class ViewController: UIViewController {
             
             scoreTimer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(ViewController.updateScoreTimer), userInfo: nil, repeats: true)
             
-            //NSTimer updating the score to display the 
+                // ~~~ NSTimer really quickly checks to see if the stop button has been pressed and referencing the updateScoreTimer func, until it has been.
             
         }
         
@@ -83,6 +88,9 @@ class ViewController: UIViewController {
         scoreInt += 1
         counterLabel.text = String(scoreInt)
         
+        
+        //this func gets referenced by the scoreTimer, adding += 1 to scoreInt each timer reference and displaying it as a String in counterLabel.
     }
+    
 
 }
