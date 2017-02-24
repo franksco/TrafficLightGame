@@ -49,12 +49,23 @@ class ViewController: UIViewController {
             
             startStopButton.isEnabled = false
             startStopButton.setTitle("", for:[])
-            
                 //code that disables the button and makes the text inside the button disappear.
+            
+            scoreInt = 0
+            counterLabel.text = String(scoreInt)
+                //Here we are setting the scoreInt to 0 and telling counterLabel to display it as such in the form of a string. 
             
         } else {
             scoreTimer.invalidate()
             //code allows startStopButton to stop scoreTimer when playing the game
+        }
+        
+        if timerInt == 0 {
+            
+            scoreInt = 0
+            startStopButton.setTitle("Restart", for: [])
+            
+            //this states if timerInt is equal to 0 then when the startStopButton "Stop" is pressed it will display "Restart" as the current text and then set the scoreInt to zero.
         }
         
     }
