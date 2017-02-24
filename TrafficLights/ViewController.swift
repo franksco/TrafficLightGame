@@ -74,6 +74,9 @@ class ViewController: UIViewController {
             
             timer.invalidate()
             
+            startStopButton.isEnabled = true
+                // ~~~ startStopButton becomes enabled when timer is invalidated and a new timer starts.
+            
             scoreTimer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(ViewController.updateScoreTimer), userInfo: nil, repeats: true)
             
                 // ~~~ NSTimer really quickly checks to see if the stop button has been pressed and referencing the updateScoreTimer func, until it has been.
