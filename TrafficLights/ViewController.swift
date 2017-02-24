@@ -52,6 +52,9 @@ class ViewController: UIViewController {
             
                 //code that disables the button and makes the text inside the button disappear.
             
+        } else {
+            scoreTimer.invalidate()
+            //code allows startStopButton to stop scoreTimer when playing the game
         }
         
     }
@@ -77,7 +80,7 @@ class ViewController: UIViewController {
             timer.invalidate()
             
             startStopButton.isEnabled = true
-                // ~~~ startStopButton becomes enabled when timer is invalidated and a new timer starts.
+                // ~~~ startStopButton becomes enabled when timer hits 0 and scoreTimer starts.
             
             scoreTimer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(ViewController.updateScoreTimer), userInfo: nil, repeats: true)
             
