@@ -45,6 +45,8 @@ class ViewController: UIViewController {
             
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
             
+            //if statement sets score equal to 0, within that statement it sets the timerInt equal to 3 and sets our trafficLight.image to a black traffic light. Then we create an NSTimer telling it to count every second referencing our updateCounter func each time.
+            
         }
         
     }
@@ -67,7 +69,20 @@ class ViewController: UIViewController {
             
             timer.invalidate()
             
+            scoreTimer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(ViewController.updateScoreTimer), userInfo: nil, repeats: true)
+            
+            //NSTimer updating the score to display the 
+            
         }
+        
+        //func updateCounter subtracts -=1 from timer each time referenced, and telling trafficLight.image to display the correct image based on what number the timer is equal to. Once the timer is equal to 0 it displays the final image and then invalidates that timer, so when we press the timer button again it doesnt create more than one "Game Timer".
+    }
+    
+    func updateScoreTimer() {
+        
+        scoreInt += 1
+        counterLabel.text = String(scoreInt)
+        
     }
 
 }
